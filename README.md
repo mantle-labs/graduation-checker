@@ -10,9 +10,8 @@ Both of these products rely on the blockchain to ensure data integrity & immutab
 With that implementation, companies could validate a potential candidate's credentials 
 by asking the University they claim they went to.
 
-
 ## Before you start
-You might find it easier to implement this project after reading our [documentation](https://docs.mantleblockchain.com).
+You might find it easier to implement this project after reading our [documentation](https://developer.mantleblockchain.com/docs).
 
 ## Functionalities
 - [x] Create new academic programs with a REST API
