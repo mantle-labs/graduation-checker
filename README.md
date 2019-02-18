@@ -17,7 +17,7 @@ You might find it easier to implement this project after reading our [documentat
 ## Functionalities
 - [x] Create new academic programs with a REST API
 - [x] Create new universities with a REST API
-- [x] Validate a digital certificate stored as a text file.
+- [x] Validate an academic certificate from a form and show the differences if necessary
 - [x] List programs filtered by university, degree and graduation year
 - [ ] Upload certificates with the app (must use Keeper directly to do so)
 - [ ] User creation procedure
@@ -25,6 +25,8 @@ You might find it easier to implement this project after reading our [documentat
 ## Prerequisites
 
 To fully use this application, you will need to have both a Keeper and Tracker product instance.
+Then, you will need to create a folder in Keeper that will be used solely to deposit certificates.
+Your certificates must follow the same structure and fields than the examples in `backend/GraduationChecker/testdata`.
 
 ### Backend
 You will need the update the following values in `backend/GraduationChecker/Config/AppSettings.cs` to run the backend project:
@@ -58,6 +60,64 @@ You might need the update the following value in `frontend/src/services/apiServi
 {
     // The URL of the C# backend, this might change if you use a different port, or if you don't host the backend on your local machine
     export const baseURL = 'http://localhost:43056';
+}
+```
+
+### Initial setup
+The app will only work with predefined universities and programs.
+Fortunately, these can be easily created using the backend applications's REST API.
+
+#### Create universities
+
+You can create new universities with a `POST /api/universities` HTTP call.
+
+Here are examples that work with our example certificates in `backend/GraduationChecker/testdata`.
+
+```
+POST /api/universities HTTP/1.1
+Host: localhost:43056
+Content-Type: application/json
+{
+	shortName: "ETS",
+	longName: "Ecole de Technologie Superieure"
+}
+
+POST /api/universities HTTP/1.1
+Host: localhost:43056
+Content-Type: application/json
+{
+	shortName: "HEC",
+	longName: "Hautes Etudes Commerciales"
+}
+```
+
+#### Create academic programs
+
+You can create new academic programs with a `POST /api/programs` HTTP call.
+
+Here are examples that work with our example certificates in `backend/GraduationChecker/testdata`.
+
+```
+POST /api/programs HTTP/1.1
+Host: localhost:43056
+Content-Type: application/json
+{
+	universityName: "HEC",
+	shortName: "MBA",
+	longName: "Business Administration",
+	degree: "Master",
+	year: "2018"
+}
+
+POST /api/programs HTTP/1.1
+Host: localhost:43056
+Content-Type: application/json
+{
+	universityName: "ETS",
+	shortName: "BCompSc",
+	longName: "Computer Science",
+	degree: "Bachelor",
+	year: "2019"
 }
 ```
 
