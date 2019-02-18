@@ -168,5 +168,5 @@ Compare a certificate against the original or a version
 `POST /keeper/{product-id}/files/{fileId}/versions/compare/{versionId}`
 
 ## More docs
-- [Mantle knowledge base](https://docs.mantleblockchain.com)
-- [Mantle API documentation](https://api.mantleblockchain.com/documentation/index.html)
+- [Mantle knowledge base](https://developer.mantleblockchain.com/docs)
+- [Mantle API documentation](https://api.mantleblockchain.com/documentation)
