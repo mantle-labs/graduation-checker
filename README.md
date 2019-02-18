@@ -163,7 +163,8 @@ List all versions for a certificate
 `GET /keeper/{product-id}/files/{fileId}/versions`
 
 Compare a certificate against the original or a version
-`POST /keeper/{product-id}/files/{fileId}/compare/original`
+`POST /keeper/{product-id}/files/{fileId}/compare/original` 
+
 `POST /keeper/{product-id}/files/{fileId}/versions/compare/{versionId}`
 
 ## More docs
