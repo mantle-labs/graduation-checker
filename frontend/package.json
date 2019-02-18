@@ -1,9 +1,9 @@
 {
-  "name": "blockchain-certificates",
+  "name": "graduation-checker",
   "version": "1.0.0",
-  "description": "A Vue.js project",
-  "author": "gabriel@mantle.services",
-  "private": true,
+  "description": "Certification validation tool built with Mantle's Tracker & Keeper products",
+  "author": "gabriel@mantle.services & simon@mantle.services",
+  "private": false,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
