@@ -143,26 +143,33 @@ In this section, we will explain how we used [Tracker](https://www.mantleblockch
 **DATA MODELING**
 
 Create a new Program or University
+
 `POST /tracker/{product-id}/multiassets`
 
 List Programs or Universities
+
 `GET /tracker/{product-id}/multiassets`
 
 Find a specific Program or University
+
 `GET /tracker/{product-id}/multiassets/{id}`
 
 List Programs and Universities' specifications
+
 `GET /tracker/{product-id}/assets`
 
 **CERTIFICATE COMPARISON**
 
 List all potential certificates
+
 `GET /keeper/{product-id}/files?folderId={folderId}`
 
 List all versions for a certificate
+
 `GET /keeper/{product-id}/files/{fileId}/versions`
 
 Compare a certificate against the original or a version
+
 `POST /keeper/{product-id}/files/{fileId}/compare/original` 
 
 `POST /keeper/{product-id}/files/{fileId}/versions/compare/{versionId}`
